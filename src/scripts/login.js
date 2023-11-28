@@ -1,3 +1,10 @@
+class UserInfo {
+  constructor(){
+  this.username= "",
+  this.password= "",
+  this.email= "" }
+};
+
 function createUser(event){
   event.preventDefault();
 
@@ -6,10 +13,15 @@ function createUser(event){
   newEmail = document.getElementById("new-user-email");
 
   if (newUsername.value && newPassword.value && newEmail.value) {
-    localStorage.setItem("username", newUsername.value);
-    localStorage.setItem("password", newPassword.value);
-    localStorage.setItem("email", newEmail.value);
+    let newUser = new UserInfo()
+      newUser.username = newUsername.value;
+      newUser.password = newPassword.value;
+      newUser.email = newEmail.value;
+
+    localStorage.setItem(`id${Math.random()*1000}`, JSON.stringify(newUser))
+
     window.location.href= "http://127.0.0.1:5500/src/pages/system.html";
+
   } else {
     alert('Preencha todos os campos para criar sua conta!')
   }
@@ -29,4 +41,3 @@ function login(event) {
   }
   else{alert("Ops! O seu usuário ou senha não foram encontrados.")}
 }
-
