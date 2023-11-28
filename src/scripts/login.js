@@ -1,9 +1,13 @@
+// Inital user object
+
 class UserInfo {
   constructor(){
   this.username= "",
   this.password= "",
   this.email= "" }
 };
+
+// New user function
 
 function createUser(event){
   event.preventDefault();
@@ -18,7 +22,7 @@ function createUser(event){
       newUser.password = newPassword.value;
       newUser.email = newEmail.value;
 
-    localStorage.setItem(`id${Math.random()*1000}`, JSON.stringify(newUser))
+    localStorage.setItem(`id ${Math.random()*1000}`, JSON.stringify(newUser))
 
     window.location.href= "http://127.0.0.1:5500/src/pages/system.html";
 
@@ -27,6 +31,7 @@ function createUser(event){
   }
 }
 
+// User login
 
 function login(event) {
   event.preventDefault();
