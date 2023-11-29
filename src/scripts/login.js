@@ -15,9 +15,15 @@ function createUser(event) {
   const newPassword = document.getElementById("new-user-password");
   const newEmail = document.getElementById("new-user-email");
 
-  if (newUsername.value && newPassword.value && newEmail.value) {
-    // Retrieve existing user data from localStorage
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+  // Retrieve existing user data from localStorage
+  const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Check if email is registered
+  const emailExists = existingUsers.some((item) => item.email === newEmail.value);
+
+  if (emailExists) {
+    alert("Este e-mail já está cadastrado")
+  } else if (newUsername.value && newPassword.value && newEmail.value) {
 
     // Create a new user object
     const newUser = new UserInfo();
