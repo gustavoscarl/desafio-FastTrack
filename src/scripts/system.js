@@ -42,6 +42,7 @@ function registerTask() {
         && taskHourBegin && taskHourEnd && taskDescription)
         {
             const newTask = {
+                id: generateId(),
                 name: taskName,
                 dateBegin: taskDateBegin,
                 dateEnd: taskDateEnd,
@@ -60,7 +61,7 @@ function registerTask() {
             // Update localStorage with the modified userObject
             localStorage.setItem("loggedInUser", JSON.stringify(userObject));
     
-            // Additional logic for updating the users array if needed
+            // Additional logic for updating the users array
             const users = JSON.parse(localStorage.getItem("users")) || [];
 
             const loggedInUserIndex = users.findIndex(user => user.username === userObject.username);
@@ -75,6 +76,10 @@ function registerTask() {
         } else {
             alert('Por favor, preencha todos os campos corretamente.')
         }
+}
+
+function generateId(){
+    return Math.random() * 1000
 }
 
 function generateTaskList() {
@@ -109,13 +114,31 @@ function generateTaskList() {
 
             // Task Name
             const taskNameCell = document.createElement('td');
-            taskNameCell.innerText = tasksWrite.name;
+            const taskNameButton = document.createElement('a');
+            
+            // Configura o botão
+            taskNameButton.classList.add('ms-4', 'text-dark');
+            taskNameButton.setAttribute('data-bs-toggle', 'modal');
+            taskNameButton.setAttribute('data-bs-target', '#exampleModal');
+            taskNameButton.innerText = tasksWrite.name;
+            
+            // Adiciona um evento de clique ao botão
+            taskNameButton.addEventListener('click', function() {
+                const modalTitle = document.querySelector('#exampleModalLabel');
+                modalTitle.innerText = tasksWrite.name;
+
+                const modalBody = document.querySelector('#modalBody');
+                modalBody.innerText = tasksWrite.description;
+            });
+
+           taskNameCell.appendChild(taskNameButton)
             row.appendChild(taskNameCell);
 
             function brazilianDateFormate(data) {
                 const [ano, mes, dia] = data.split('-');
                 return `${dia}/${mes}/${ano}`;
             }
+
             // Date Begin and Hour Begin
             const dateBeginCell = document.createElement('td');
             dateBeginCell.innerText = `${brazilianDateFormate(tasksWrite.dateBegin)} às ${tasksWrite.hourBegin}`;
@@ -163,6 +186,35 @@ function generateTaskList() {
             editCell.appendChild(editParagraph)
             row.appendChild(editCell);
 
+            // Edit starting function
+            editParagraph.addEventListener('click', function () {  
+            const taskDetails = {
+                id: tasksWrite.id,
+                name: tasksWrite.name,
+                dateBegin: tasksWrite.dateBegin,
+                dateEnd: tasksWrite.dateEnd,
+                hourBegin: tasksWrite.hourBegin,
+                hourEnd: tasksWrite.hourEnd,
+                description: tasksWrite.description,
+                accomplished: tasksWrite.accomplished
+            };
+            
+            const taskId = tasksWrite.id;
+            const currentTaskIndex = {
+                id: taskId
+            };
+
+            console.log(tasksWrite);
+            console.log(userObject.tasks.indexOf(tasksWrite))
+
+            const currentTaskIndexString = JSON.stringify(currentTaskIndex);
+            localStorage.setItem("editTaskIndex", currentTaskIndexString);
+
+            const taskDetailsString = JSON.stringify(taskDetails);
+            localStorage.setItem("editTask", taskDetailsString);
+            window.location.href = "edit-page.html"
+});
+
             // Final appends
             tbody.appendChild(row);
 
@@ -172,5 +224,7 @@ function generateTaskList() {
     }
 }
 
+// Run generatetaskList one time when site is reloaded;
 generateTaskList();
+
 

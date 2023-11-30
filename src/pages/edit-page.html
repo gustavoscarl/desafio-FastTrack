@@ -8,13 +8,10 @@
   <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="py-md-4 py-3 bg-dark d-flex justify-content-between justify-content-lg-around">
-
-  </header>
-  <main id="main-container" class="container-md py-5">
+  <main class="container-md my-5 py-5">
     <div id="task-manager" class="row mb-5">
       <div class="fs-2 text-center col-12 mt-5 mb-5">
-        <h1>Gerenciador de Tarefas</h1>
+        <h1>Alterar Tarefa</h1>
       </div>
       <form>
         <div id="task-form" class="col-10 col-md-9 mx-auto row">
@@ -38,34 +35,43 @@
             <p class="mb-1 ms-1">Descrição da Tarefa</p>
             <textarea id="task-description" style="height: 120px;" class="form-control"></textarea>
           </div>
-          <div id="task-button" class="d-flex justify-content-center">
-            <input onclick="registerTask()" type="button" class="btn btn-primary px-4 mt-2 shadow-md" value="Criar tarefa">
+          <div class="d-md-flex justify-content-md-around">
+              <div id="change-button">
+                <input type="button" class="btn btn-primary px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Alterar tarefa">
+              </div>
+              <div id="delete-button">
+                <input type="button" class="btn btn-danger px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Excluir tarefa">
+              </div>
+              <div id="accomplish-button" class="">
+                <input onclick="" type="button" class="btn btn-success px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Marcar como realizada">
+              </div>
+              <div id="cancel-button"  class="">
+                <input onclick="" type="button" class="btn btn-secondary px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Cancelar">
+              </div>
           </div>
         </div>
       </form>
-    </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="modalBody">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Salvar alterações?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Caso salvar as alterações, não será possível recuperar os dados.
+            </div>
+            <div class="modal-footer">
+              <button onclick="changeTask()" type="button" class="btn btn-primary px-5 me-auto">Salvar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <section id="task-list" class="container-lg">
-
-  </section>
-
-  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../scripts/system.js"></script>
+  
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../scripts/edit-system.js"></script>
 </body>
 </html>
