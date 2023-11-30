@@ -40,7 +40,7 @@
                 <input type="button" class="btn btn-primary px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Alterar tarefa">
               </div>
               <div id="delete-button">
-                <input type="button" class="btn btn-danger px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Excluir tarefa">
+                <input type="button" class="btn btn-danger px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" data-bs-toggle="modal" data-bs-target="#deleteTask" value="Excluir tarefa">
               </div>
               <div id="accomplish-button" class="">
                 <input onclick="" type="button" class="btn btn-success px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Marcar como realizada">
@@ -63,6 +63,23 @@
             </div>
             <div class="modal-footer">
               <button onclick="changeTask()" type="button" class="btn btn-primary px-5 me-auto">Salvar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="deleteTask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Tem certeza sobre excluir a tarefa? Não será possível recuperar os dados.
+            </div>
+            <div class="modal-footer">
+              <button onclick="deleteTask()" type="button" class="btn btn-primary px-3 me-auto">Sim</button>
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
