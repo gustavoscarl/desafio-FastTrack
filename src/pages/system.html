@@ -8,43 +8,47 @@
   <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header class="py-md-4 py-3 bg-dark d-flex justify-content-between">
+  <header class="py-md-4 py-3 bg-dark d-flex justify-content-between justify-content-lg-around">
 
   </header>
   <main id="main-container" class="container-md py-5">
-    <div id="task-manager" class="row">
+    <div id="task-manager" class="row mb-5">
       <div class="fs-2 text-center col-12 mt-5 mb-5">
         <h1>Gerenciador de Tarefas</h1>
       </div>
       <form>
-        <div id="task-form" class="col-10 col-md-8 mx-auto row">
-          <div id="task-name" class="mb-3">
-            <label for="task-name-input" class="mb-1 ms-1 text-muted"> Nome da Tarefa</label>
+        <div id="task-form" class="col-10 col-md-9 mx-auto row">
+          <div id="task-name" class="mb-3 mb-md-2">
+            <label for="task-name-input" class="mb-1 ms-1"> Nome da Tarefa</label>
             <input class="form-control shadow-sm" id="task-name-input" type="text" placeholder="Tarefa"></input>
           </div>
-          <div id="task-date" class="my-3">
-            <label for="task-date-begin" class="mb-1 ms-1 text-muted">Data de Início</label>
+          <div id="task-date" class="my-3 col-md-6 my-md-2">
+            <label for="task-date-begin" class="mb-1 ms-1">Data de Início</label>
             <input id="task-date-begin" class="form-control shadow-sm text-muted" type="date"></input>
-            <label for="task-date-end" class="mb-1 mt-2 ms-1 text-muted">Data de Término</label>
+            <label for="task-date-end" class="mb-1 mt-2 ms-1">Data de Término</label>
             <input id="task-date-end" class="form-control shadow-sm text-muted" type="date"></input>
           </div>
-          <div id="task-hour" class="my-3">
-            <label for="task-hour-begin" class="mb-1 ms-1 text-muted">Hora de Início</label>
+          <div id="task-hour" class="my-3 col-md-6 my-md-2">
+            <label for="task-hour-begin" class="mb-1 ms-1">Hora de Início</label>
             <input id="task-hour-begin" class="form-control shadow-sm text-muted" type="time"></input>
-            <label for="task-hour-end" class="mb-1 mt-2 ms-1 text-muted">Hora de Término</label>
+            <label for="task-hour-end" class="mb-1 mt-2 ms-1">Hora de Término</label>
             <input id="task-hour-end" class="form-control shadow-sm text-muted" type="time"></input>
           </div>
-          <div id="task-description" class="my-3">
-            <p class="mb-1 ms-1 text-muted">Descrição da Tarefa</p>
-            <textarea style="height: 120px;" class="form-control"></textarea>
+          <div class="my-3">
+            <p class="mb-1 ms-1">Descrição da Tarefa</p>
+            <textarea id="task-description" style="height: 120px;" class="form-control"></textarea>
           </div>
           <div id="task-button" class="d-flex justify-content-center">
-            <input type="button" class="btn btn-primary px-4 mt-2" value="Criar tarefa">
+            <input onclick="registerTask()" type="button" class="btn btn-primary px-4 mt-2 shadow-md" value="Criar tarefa">
           </div>
         </div>
       </form>
     </div>
+
   </main>
+  <section id="task-list" class="container-lg">
+
+  </section>
   <script src="../scripts/system.js"></script>
 </body>
 </html>
