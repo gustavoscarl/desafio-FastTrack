@@ -25,7 +25,7 @@ logoutLink.addEventListener('click', (event) => {
 
     localStorage.removeItem("loggedInUser")
 
-    window.location.href = "/desafio-FastTrack/index.html";
+    window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/");
 } )
 
 // Create task and register in users key
@@ -216,7 +216,7 @@ function generateTaskList() {
 
             const taskDetailsString = JSON.stringify(taskDetails);
             localStorage.setItem("editTask", taskDetailsString);
-            window.location.href = "/src/pages/edit-page.html"
+            window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/src/pages/edit-page.html")
 });
 
             // Final appends
