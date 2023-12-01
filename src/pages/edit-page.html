@@ -35,23 +35,23 @@
             <p class="mb-1 ms-1">Descrição da Tarefa</p>
             <textarea id="task-description" style="height: 120px;" class="form-control"></textarea>
           </div>
-          <div class="d-md-flex justify-content-md-around">
+          <div class="d-md-flex justify-content-md-around flex-md-wrap">
               <div id="change-button">
                 <input type="button" class="btn btn-primary px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" data-bs-toggle="modal" data-bs-target="#exampleModal" value="Alterar tarefa">
               </div>
               <div id="delete-button">
                 <input type="button" class="btn btn-danger px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" data-bs-toggle="modal" data-bs-target="#deleteTask" value="Excluir tarefa">
               </div>
-              <div id="accomplish-button" class="">
-                <input onclick="" type="button" class="btn btn-success px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Marcar como realizada">
+              <div class="">
+                <input onclick=""  id="accomplish-button" type="button" class="btn btn-success px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" data-bs-toggle="modal" data-bs-target="#accomplishTask" value="Marcar como realizada">
               </div>
               <div id="cancel-button"  class="">
-                <input onclick="" type="button" class="btn btn-secondary px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Cancelar">
+                <input onclick="cancelEditTask()" type="button" class="btn btn-secondary px-2 px-lg-4 mt-4 mt-md-2 shadow-md col-12 col-md-auto" value="Cancelar">
               </div>
           </div>
         </div>
       </form>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="changeTaskLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -68,7 +68,7 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="deleteTask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="deleteTask" tabindex="-1" aria-labelledby="deleteTaskLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -80,6 +80,23 @@
             </div>
             <div class="modal-footer">
               <button onclick="deleteTask()" type="button" class="btn btn-primary px-3 me-auto">Sim</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="accomplishTask" tabindex="-1" aria-labelledby="accomplishTaskLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Realizar tarefa?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="accomplish-body">
+
+            </div>
+            <div class="modal-footer">
+              <button onclick="accomplishTask()" type="button" class="btn btn-primary px-3 me-auto">Confirmar</button>
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>

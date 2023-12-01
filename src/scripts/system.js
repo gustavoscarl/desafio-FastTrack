@@ -158,21 +158,24 @@ function generateTaskList() {
             var dateBegin = new Date(tasksWrite.dateBegin + ' ' + tasksWrite.hourBegin)
            
 
-                if (tasksWrite.accomplished) {}
+                if (tasksWrite.accomplished) {
+                    statusParagraph.innerText = 'Realizada';
+                    statusParagraph.classList.add('text-success'); 
+                }
                 else if (dateEnd.toISOString() < currentDate.toISOString()) 
                 {
-                statusParagraph.innerText = 'Em atraso';
-                statusParagraph.classList.add('text-danger');
+                    statusParagraph.innerText = 'Em atraso';
+                    statusParagraph.classList.add('text-danger');
                 } 
                 else if (dateBegin.toISOString() > currentDate.toISOString()) 
                 {
-                statusParagraph.innerText = 'Pendente';
-                statusParagraph.classList.add('text-warning');
+                    statusParagraph.innerText = 'Pendente';
+                    statusParagraph.classList.add('text-warning');
                 } 
                 else if (dateBegin.toISOString() <= currentDate.  toISOString() && currentDate.toISOString() <= dateEnd.toISOString())
                 {
-                statusParagraph.innerText = 'Em andamento';
-                statusParagraph.classList.add('text-primary');
+                    statusParagraph.innerText = 'Em andamento';
+                    statusParagraph.classList.add('text-primary');
                 }
 
             statusCell.appendChild(statusParagraph);
