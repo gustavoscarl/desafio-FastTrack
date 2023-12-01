@@ -64,7 +64,7 @@ function login(event) {
   if (matchedUser) {
     localStorage.setItem("loggedInUser", JSON.stringify(matchedUser));
 
-    window.location.href = "http://127.0.0.1:5500/src/pages/system.html";
+    window.location.href = "/src/pages/system.html";
   } else {
     alert("Ops! O seu usuário ou senha não foram encontrados.");
   }
