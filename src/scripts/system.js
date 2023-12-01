@@ -177,7 +177,7 @@ function generateTaskList() {
                     statusParagraph.innerText = 'Realizada';
                     statusParagraph.classList.add('text-success'); 
                 }
-                else if (dateEnd.toISOString() < currentDate.toISOString()) 
+                else if (dateEnd.toISOString() < currentDate.toISOString() || dateEnd.toISOString() < dateBegin.toISOString()) 
                 {
                     statusParagraph.innerText = 'Em atraso';
                     statusParagraph.classList.add('text-danger');
