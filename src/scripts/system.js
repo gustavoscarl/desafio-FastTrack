@@ -37,7 +37,6 @@ logoutLink.addEventListener('click', (event) => {
 // Set min attribute to date
 function setMinDate(){
     var taskDateEnd = document.getElementById('task-date-end');
-    var tasksWrite = JSON.parse(localStorage.getItem("editTask")).dateBegin
     var taskDateBegin = document.getElementById('task-date-begin').value;
     taskDateEnd.setAttribute('min', `${taskDateBegin}`)
 }
