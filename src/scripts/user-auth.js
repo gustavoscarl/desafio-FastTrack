@@ -36,13 +36,10 @@ function createUser(event) {
 
     // Save the updated array back to localStorage
     localStorage.setItem("users", JSON.stringify(existingUsers));
-  
-    var sucessModal = new bootstrap.Modal(document.getElementById('sucessModal'));
-    sucessModal.show();
 
-    newEmail.value = "";
-    newUsername.value = "";
-    newPassword.value = "";
+    localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+  
+    window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/src/pages/system.html");
     
   } else {
     alert("Preencha todos os campos para criar sua conta!");
