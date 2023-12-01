@@ -56,7 +56,7 @@ function changeTask() {
             localStorage.removeItem("editTaskIndex")
 
             // Redirect to the task list or another page
-            window.location.href = "/desafio-FastTrack/system.html";
+            window.location.href = "./system.html";
         }
     }
 } else {
@@ -89,7 +89,7 @@ function deleteTask() {
           localStorage.setItem("loggedInUser", JSON.stringify(updatedLoggedInUser));
 
           // Redirect to the task list or another page
-          window.location.href = "/desafio-FastTrack/system.html";
+          window.location.href = "./system.html";
       }
   }
 }
@@ -129,7 +129,7 @@ function accomplishTask() {
               localStorage.removeItem("editTaskIndex")
   
               // Redirect to the task list or another page
-              window.location.href = "/desafio-FastTrack/system.html";
+              window.location.href = "./system.html";
           }
         }
       }
@@ -185,5 +185,5 @@ if (loggedInUserIndex !== -1) {
 // Cancel button function
 
 function cancelEditTask(){
-    window.location.href = "/desafio-FastTrack/system.html";
+    window.location.href = "./system.html";
 }
