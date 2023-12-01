@@ -28,6 +28,14 @@ logoutLink.addEventListener('click', (event) => {
     window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/");
 } )
 
+// Set min attribute to date
+function setMinDate(){
+    var taskDateEnd = document.getElementById('task-date-end');
+    var tasksWrite = JSON.parse(localStorage.getItem("editTask")).dateBegin
+    taskDateEnd.setAttribute('min', `${tasksWrite}`)
+}
+
+
 // Create task and register in users key
 
 function registerTask() {
