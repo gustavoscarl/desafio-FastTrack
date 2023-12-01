@@ -1,3 +1,8 @@
+if (!JSON.parse(localStorage.getItem("loggedInUser"))) {
+    alert('Você deve estar logado para ver a página.')
+    window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/");
+}
+
 // Initial values
 var taskName = document.getElementById('task-name-input');
 var taskDateBegin = document.getElementById('task-date-begin');
