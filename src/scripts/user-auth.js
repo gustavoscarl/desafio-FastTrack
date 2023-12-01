@@ -39,6 +39,10 @@ function createUser(event) {
   
     var sucessModal = new bootstrap.Modal(document.getElementById('sucessModal'));
     sucessModal.show();
+
+    newEmail.value = "";
+    newUsername.value = "";
+    newEmail.value = "";
     
   } else {
     alert("Preencha todos os campos para criar sua conta!");
@@ -62,8 +66,8 @@ function login(event) {
   );
 
   if (matchedUser) {
+
     localStorage.setItem("loggedInUser", JSON.stringify(matchedUser));
-    
     window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/src/pages/system.html");
 
   } else {
