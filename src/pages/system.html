@@ -26,7 +26,7 @@
             <label for="task-date-begin" class="mb-1 ms-1">Data de Início</label>
             <input  onchange="setMinDate()" id="task-date-begin" class="form-control shadow-sm text-muted" required name="date" type="date"></input>
             <label for="task-date-end" class="mb-1 mt-2 ms-1">Data de Término</label>
-            <input id="task-date-end" class="form-control shadow-sm text-muted" required name="date" type="date"></input>
+            <input id="task-date-end" pattern="/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;" class="form-control shadow-sm text-muted" required name="date" type="date"></input>
           </div>
           <div id="task-hour" class="my-3 col-md-6 my-md-2">
             <label for="task-hour-begin" class="mb-1 ms-1">Hora de Início</label>
