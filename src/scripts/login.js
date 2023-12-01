@@ -64,7 +64,7 @@ function login(event) {
   if (matchedUser) {
     localStorage.setItem("loggedInUser", JSON.stringify(matchedUser));
 
-    window.location.href = "/desafio-FastTrack/src/pages/system.html";
+    window.location.href = "https://gustavoscarl.github.io/desafio-FastTrack/src/pages/system.html";
   } else {
     alert("Ops! O seu usuário ou senha não foram encontrados.");
   }
