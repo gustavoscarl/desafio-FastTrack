@@ -2,7 +2,7 @@
 if (!JSON.parse(localStorage.getItem("loggedInUser"))) {
     alert('Você deve estar logado para ver a página.')
     window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/");
-}
+} else {}
 
 // Write username in header
 const userObject = JSON.parse(localStorage.getItem("loggedInUser"));
