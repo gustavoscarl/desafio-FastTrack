@@ -1,6 +1,5 @@
 // Write username in header
 const userObject = JSON.parse(localStorage.getItem("loggedInUser"));
-
 const headerSelect = document.querySelector("header");
 const usernameDiv = document.createElement("div");
 usernameDiv.setAttribute('class','username-div text-white ps-3 ps-md-5 ps-lg-0');
@@ -73,6 +72,7 @@ function registerTask() {
             localStorage.setItem("users", JSON.stringify(users));
 
             generateTaskList();
+            scrollToBottom();
         } else {
             alert('Por favor, preencha todos os campos corretamente.')
         }
@@ -226,6 +226,17 @@ function generateTaskList() {
         }
     }
 }
+
+// Smooth scroll to bottom of page
+function scrollToBottom() {
+    const body = document.body;
+    const html = document.documentElement;
+    const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);     
+    window.scrollTo({
+        top: height,
+         behavior: 'smooth'
+    });
+ }
 
 // Run generatetaskList one time when site is reloaded;
 generateTaskList();
