@@ -44,7 +44,9 @@ function setMinDate(){
 
 // Create task and register in users key
 
-function registerTask() {
+function registerTask(event) {
+    event.preventDefault();
+
     var taskName = document.getElementById('task-name-input').value;
     var taskDateBegin = document.getElementById('task-date-begin').value;
     var taskDateEnd = document.getElementById('task-date-end').value;
