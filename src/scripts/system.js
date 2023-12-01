@@ -25,7 +25,7 @@ logoutLink.addEventListener('click', (event) => {
 
     localStorage.removeItem("loggedInUser")
 
-    window.location.href = "http://127.0.0.1:5500/index.html";
+    window.location.href = "/desafio-FastTrack/index.html";
 } )
 
 // Create task and register in users key
@@ -216,7 +216,7 @@ function generateTaskList() {
 
             const taskDetailsString = JSON.stringify(taskDetails);
             localStorage.setItem("editTask", taskDetailsString);
-            window.location.href = "edit-page.html"
+            window.location.href = "/desafio-FastTrack/src/pages/edit-page.html"
 });
 
             // Final appends
