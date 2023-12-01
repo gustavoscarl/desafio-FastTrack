@@ -114,12 +114,13 @@ function generateTaskList() {
 
             // Task Name
             const taskNameCell = document.createElement('td');
-            const taskNameButton = document.createElement('a');
+            const taskNameButton = document.createElement('p');
             
             // Configura o botão
             taskNameButton.classList.add('ms-4', 'text-dark');
             taskNameButton.setAttribute('data-bs-toggle', 'modal');
             taskNameButton.setAttribute('data-bs-target', '#exampleModal');
+            taskNameButton.setAttribute('class', 'btn btn-link text-dark fw-semibold');
             taskNameButton.innerText = tasksWrite.name;
             
             // Adiciona um evento de clique ao botão
