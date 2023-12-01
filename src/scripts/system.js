@@ -1,3 +1,9 @@
+//Only visible to users
+if (!JSON.parse(localStorage.getItem("loggedInUser"))) {
+    alert('Você deve estar logado para ver a página.')
+    window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/");
+}
+
 // Write username in header
 const userObject = JSON.parse(localStorage.getItem("loggedInUser"));
 const headerSelect = document.querySelector("header");
@@ -250,5 +256,6 @@ function scrollToBottom() {
 
 // Run generatetaskList one time when site is reloaded;
 generateTaskList();
+
 
 
