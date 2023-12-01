@@ -95,7 +95,7 @@ function generateTaskList() {
     
     // Create a table head
     const thead = document.createElement('thead');
-    thead.innerHTML = '<tr><th class="col-3">Tarefa</th><th class="col-3">Início</th><th class="col-3">Término</th><th>Status</th><th>Alterar</th></tr>';
+    thead.innerHTML = '<tr><th>Tarefa</th><th>Início</th><th >Término</th><th>Status</th><th>Alterar</th></tr>';
     table.appendChild(thead);
 
     // Create a table body
