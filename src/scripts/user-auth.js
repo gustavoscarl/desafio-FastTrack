@@ -42,7 +42,7 @@ function createUser(event) {
 
     newEmail.value = "";
     newUsername.value = "";
-    newEmail.value = "";
+    newPassword.value = "";
     
   } else {
     alert("Preencha todos os campos para criar sua conta!");
