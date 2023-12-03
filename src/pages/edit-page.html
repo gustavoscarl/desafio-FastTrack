@@ -21,13 +21,13 @@
           </div>
           <div id="task-date" class="my-3 col-md-6 my-md-2">
             <label for="task-date-begin" class="mb-1 ms-1">Data de Início</label>
-            <input id="task-date-begin" class="form-control shadow-sm text-muted" type="date"></input>
+            <input id="task-date-begin" onchange="setMinDate()" class="form-control shadow-sm text-muted" type="date"></input>
             <label for="task-date-end" class="mb-1 mt-2 ms-1">Data de Término</label>
             <input id="task-date-end" class="form-control shadow-sm text-muted" type="date"></input>
           </div>
           <div id="task-hour" class="my-3 col-md-6 my-md-2">
             <label for="task-hour-begin" class="mb-1 ms-1">Hora de Início</label>
-            <input id="task-hour-begin" class="form-control shadow-sm text-muted" type="time"></input>
+            <input id="task-hour-begin" onchange="setMinHour()" class="form-control shadow-sm text-muted" type="time"></input>
             <label for="task-hour-end" class="mb-1 mt-2 ms-1">Hora de Término</label>
             <input id="task-hour-end" class="form-control shadow-sm text-muted" type="time"></input>
           </div>

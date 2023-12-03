@@ -20,6 +20,26 @@ taskHourBegin.value = taskDetails.hourBegin;
 taskHourEnd.value = taskDetails.hourEnd;
 taskDescription.value = taskDetails.description;
 
+// Set min attribute to date
+function setMinDate(){
+    var taskDateEnd = document.getElementById('task-date-end');
+    var taskDateBegin = document.getElementById('task-date-begin').value;
+    taskDateEnd.setAttribute('min', `${taskDateBegin}`)
+}
+
+// Set min attribute to hour if is the same date
+function setMinHour() {
+    var taskHourEnd = document.getElementById('task-hour-end')
+    var taskHourBegin = document.getElementById('task-hour-begin').value;
+    var taskDateEnd = document.getElementById('task-date-end').value;
+    var taskDateBegin = document.getElementById('task-date-begin').value;
+        if (taskDateEnd === taskDateBegin) {
+            taskHourEnd.setAttribute('min', `${taskHourBegin}`)
+        } else {
+            taskHourEnd.removeAttribute('min');
+        }
+}
+
 
 function changeTask() {
   var taskName = document.getElementById('task-name-input').value;
