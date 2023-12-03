@@ -49,6 +49,8 @@ function setMinHour() {
     var taskDateBegin = document.getElementById('task-date-begin').value;
         if (taskDateEnd === taskDateBegin) {
             taskHourEnd.setAttribute('min', `${taskHourBegin}`)
+        } else {
+            taskHourEnd.removeAttribute('min');
         }
 }
 
