@@ -41,6 +41,17 @@ function setMinDate(){
     taskDateEnd.setAttribute('min', `${taskDateBegin}`)
 }
 
+// Set min attribute to hour if is the same date
+function setMinHour() {
+    var taskHourEnd = document.getElementById('task-hour-end')
+    var taskHourBegin = document.getElementById('task-hour-begin').value;
+    var taskDateEnd = document.getElementById('task-date-end').value;
+    var taskDateBegin = document.getElementById('task-date-begin').value;
+        if (taskDateEnd === taskDateBegin) {
+            taskHourEnd.setAttribute('min', `${taskHourBegin}`)
+        }
+}
+
 
 // Create task and register in users key
 
