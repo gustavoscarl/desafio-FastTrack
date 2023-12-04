@@ -62,8 +62,9 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 
 // Hide modal on click
 function hideModal() {
-    var bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-    bootstrapModal.hide();
+    const myModalEl = document.getElementById('exampleModal')
+    const modal = new mdb.Modal(myModalEl)
+    modal.hide()
 }
 
 function changeTask() {
