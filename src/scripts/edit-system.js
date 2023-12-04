@@ -39,6 +39,22 @@ function setMinHour() {
             taskHourEnd.removeAttribute('min');
         }
 }
+// Prevent default and switch logic
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    switch (event.submitter.id) {
+        case 'submit-button':
+          changeTask();
+          break;
+        case 'deleteButton':
+          deleteTask();
+          break;
+        case 'accomplishButton':
+          accomplishTask();
+          break;
+      }
+});
 
 function changeTask() {
   var taskName = document.getElementById('task-name-input').value;
