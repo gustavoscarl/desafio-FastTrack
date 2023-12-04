@@ -65,8 +65,27 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 
 function hideModal() {
-    myModal.hide();
+    if (myModal) {
+        var backdrop = modal.querySelector('.modal-backdrop');
+
+        myModal.style.display = 'none';
+        myModal.setAttribute('aria-hidden', true);
+        myModal.removeAttribute('aria-modal');
+        myModal.removeAttribute('role');
+
+        if (backdrop) {
+            backdrop.style.display = 'none'; // You may need to hide the backdrop manually
+        }
+
+        document.body.classList.remove('modal-open');
+        // You might need to reset other adjustments or handle other cleanup tasks here
+
+        // Trigger the 'hidden' event (if needed)
+        var hiddenEvent = new Event('hidden');
+        modal.dispatchEvent(hiddenEvent);
+    }
 }
+
 
 
 function changeTask() {
