@@ -40,7 +40,7 @@ function setMinHour() {
         }
 }
 // Prevent default and switch logic
-document.getElementById('myForm').addEventListener('submit', function(event) {
+document.getElementById('my-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     switch (event.submitter.id) {
