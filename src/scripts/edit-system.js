@@ -42,8 +42,8 @@ function setMinHour() {
 
 
 function changeTask(event) {
-  event.preventDefault;
-  
+  event.preventDefault();
+
   var taskName = document.getElementById('task-name-input').value;
   var taskDateBegin = document.getElementById('task-date-begin').value;
   var taskDateEnd = document.getElementById('task-date-end').value;
