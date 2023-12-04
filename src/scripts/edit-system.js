@@ -104,7 +104,7 @@ function changeTask() {
         }
     }
 } else {
-    alert('Por favor, preencha todos os campos corretamente.');
+    alert('Por favor, preencha todos os campos!');
 }
 }
 
