@@ -268,8 +268,13 @@ function scrollToBottom() {
     });
  }
 
+// Add was-valited class to form 
+ const buttonForm = document.getElementById('create-task-button')
+
+ buttonForm.addEventListener('click', function addClassForm(){
+     const form = document.getElementById('my-form');
+     form.classList.add('was-validated')
+ });
+
 // Run generatetaskList one time when site is reloaded;
 generateTaskList();
-
-
-

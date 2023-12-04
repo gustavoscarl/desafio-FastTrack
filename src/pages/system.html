@@ -16,7 +16,7 @@
       <div class="fs-2 text-center col-12 mt-5 mb-5">
         <h1>Gerenciador de Tarefas</h1>
       </div>
-      <form onsubmit="registerTask(event)" class="was-validated">
+      <form onsubmit="registerTask(event)" id="my-form">
         <div id="task-form" class="col-10 col-md-9 mx-auto row">
           <div id="task-name" class="mb-3 mb-md-2">
             <label for="task-name-input" class="mb-1 ms-1"> Nome da Tarefa</label>
@@ -39,7 +39,7 @@
             <textarea id="task-description" required style="height: 120px;" class="form-control"></textarea>
           </div>
           <div id="task-button" class="d-flex justify-content-center">
-            <input type="submit" class="btn btn-primary px-4 mt-2 shadow-md" value="Criar tarefa">
+            <input type="submit" id="create-task-button" class="btn btn-primary px-4 mt-2 shadow-md" value="Criar tarefa">
           </div>
         </div>
       </form>
