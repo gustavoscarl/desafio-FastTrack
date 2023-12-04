@@ -60,6 +60,12 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
       }
 });
 
+// Hide modal on click
+function hideModal() {
+    var bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    bootstrapModal.hide();
+}
+
 function changeTask() {
   var taskName = document.getElementById('task-name-input').value;
   var taskDateBegin = document.getElementById('task-date-begin').value;
@@ -68,9 +74,6 @@ function changeTask() {
   var taskHourEnd = document.getElementById('task-hour-end').value;
   var taskDescription = document.getElementById('task-description').value;
   
-  var bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-  bootstrapModal.hide();
-
   if (taskName && taskDateBegin && taskDateEnd 
     && taskHourBegin && taskHourEnd && taskDescription) {
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
