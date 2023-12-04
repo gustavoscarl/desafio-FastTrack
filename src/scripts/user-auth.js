@@ -68,6 +68,6 @@ function login(event) {
     window.location.replace("https://gustavoscarl.github.io/desafio-FastTrack/src/pages/system.html");
 
   } else {
-    alert("Ops! O seu usuário ou senha não foram encontrados.");
+    alert("Ops! O seu e-mail ou senha não foram encontrados.");
   }
 }
