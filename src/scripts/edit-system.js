@@ -99,6 +99,7 @@ function changeTask() {
 
             // Clear the editTaskId
             localStorage.removeItem("editTaskIndex")
+            localStorage.removeItem("editTask");
 
             // Redirect to the task list
             window.location.replace("/desafio-FastTrack/src/pages/system.html");
@@ -134,6 +135,7 @@ function deleteTask() {
           localStorage.setItem("loggedInUser", JSON.stringify(updatedLoggedInUser));
 
           localStorage.removeItem("editTaskIndex")
+          localStorage.removeItem("editTask");
 
           // Redirect to the task list or another page
           window.location.replace("/desafio-FastTrack/src/pages/system.html");
@@ -174,6 +176,7 @@ function accomplishTask() {
   
               // Clear the editTaskId
               localStorage.removeItem("editTaskIndex")
+              localStorage.removeItem("editTask");
   
               // Redirect to the task list or another page
               window.location.replace("/desafio-FastTrack/src/pages/system.html");
@@ -233,7 +236,8 @@ if (loggedInUserIndex !== -1) {
 
 function cancelEditTask(){
     localStorage.removeItem("editTaskIndex");
-    
+    localStorage.removeItem("editTask");
+
     window.location.replace("/desafio-FastTrack/src/pages/system.html");
 }
 
