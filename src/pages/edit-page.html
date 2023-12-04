@@ -13,7 +13,7 @@
       <div class="fs-2 text-center col-12 mt-5 mb-5">
         <h1>Alterar Tarefa</h1>
       </div>
-      <form onsubmit="noSubmitDefault(event)">
+      <form>
         <div id="task-form" class="col-10 col-md-9 mx-auto row">
           <div id="task-name" class="mb-3 mb-md-2">
             <label for="task-name-input" class="mb-1 ms-1"> Nome da Tarefa</label>
@@ -62,7 +62,7 @@
               Caso salvar as alterações, não será possível recuperar os dados anteriores à modificação.
             </div>
             <div class="modal-footer">
-              <input onsubmit="changeTask(event)" data-bs-dismiss="modal" type="submit" class="btn btn-primary px-5 me-auto" value="Salvar">
+              <input onclick="changeTask(event)" data-bs-dismiss="modal" type="button" class="btn btn-primary px-5 me-auto" value="Salvar">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
