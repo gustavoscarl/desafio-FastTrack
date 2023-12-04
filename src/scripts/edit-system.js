@@ -65,7 +65,7 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 function hideModal() {
     var modal = document.getElementById('exampleModal');
     if (modal) {
-        var backdrop = modal.querySelector('.modal-backdrop');
+        var backdrop = querySelector('.modal-backdrop');
 
         modal.style.display = 'none';
         modal.setAttribute('aria-hidden', true);
