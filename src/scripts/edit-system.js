@@ -62,16 +62,15 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 
 // Hide modal on click
 
-var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-
 function hideModal() {
-    if (myModal) {
-        var backdrop = myModal.querySelector('.modal-backdrop');
+    var modal = document.getElementById('exampleModal');
+    if (modal) {
+        var backdrop = modal.querySelector('.modal-backdrop');
 
-        myModal.style.display = 'none';
-        myModal.setAttribute('aria-hidden', true);
-        myModal.removeAttribute('aria-modal');
-        myModal.removeAttribute('role');
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', true);
+        modal.removeAttribute('aria-modal');
+        modal.removeAttribute('role');
 
         if (backdrop) {
             backdrop.style.display = 'none'; // You may need to hide the backdrop manually
@@ -82,7 +81,7 @@ function hideModal() {
 
         // Trigger the 'hidden' event (if needed)
         var hiddenEvent = new Event('hidden');
-        myModal.dispatchEvent(hiddenEvent);
+        modal.dispatchEvent(hiddenEvent);
     }
 }
 
