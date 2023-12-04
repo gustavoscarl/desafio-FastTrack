@@ -231,3 +231,17 @@ if (loggedInUserIndex !== -1) {
 function cancelEditTask(){
     window.location.replace("/desafio-FastTrack/src/pages/system.html");
 }
+
+// text when input invalid
+
+function textInvalid() {
+   
+    if(!document.querySelector('.invalid-feedback')) {
+     const parentDiv = document.getElementById('task-hour');
+     const newDiv = document.createElement('div')
+     newDiv.classList.add('invalid-feedback', 'd-block')
+     newDiv.innerText = 'Preencha a Hora de Término para que seja maior ou igual que a Hora de Início(caso forem no mesmo dia).'
+     parentDiv.appendChild(newDiv)
+ } else {}
+ 
+ }

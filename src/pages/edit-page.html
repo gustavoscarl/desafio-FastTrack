@@ -29,7 +29,7 @@
             <label for="task-hour-begin" class="mb-1 ms-1">Hora de Início</label>
             <input id="task-hour-begin" onchange="setMinHour()" class="form-control shadow-sm text-muted" type="time"></input>
             <label for="task-hour-end" class="mb-1 mt-2 ms-1">Hora de Término</label>
-            <input id="task-hour-end" class="form-control shadow-sm text-muted" type="time"></input>
+            <input id="task-hour-end" oninvalid="textInvalid()" class="form-control shadow-sm text-muted" type="time"></input>
           </div>
           <div class="my-3">
             <p class="mb-1 ms-1">Descrição da Tarefa</p>
