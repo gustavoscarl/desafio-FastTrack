@@ -132,7 +132,7 @@ function generateTaskList() {
 
     // Iterate through each task in the user's tasks
     const users = JSON.parse(localStorage.getItem("users"))
-    const loggedInUserIndex = users.findIndex(user => user.username === userObject.username);
+    const loggedInUserIndex = users.findIndex(user => user.email === userObject.email);
 
     if (users[loggedInUserIndex].tasks && users[loggedInUserIndex].tasks.length > 0) {
         for (let i = 0; i < users[loggedInUserIndex].tasks.length; i++) {
