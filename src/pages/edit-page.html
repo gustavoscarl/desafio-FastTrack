@@ -17,23 +17,23 @@
         <div id="task-form" class="col-10 col-md-9 mx-auto row">
           <div id="task-name" class="mb-3 mb-md-2">
             <label for="task-name-input" class="mb-1 ms-1"> Nome da Tarefa</label>
-            <input class="form-control shadow-sm" id="task-name-input" type="text" placeholder="Tarefa"></input>
+            <input class="form-control shadow-sm" id="task-name-input" type="text" placeholder="Tarefa">
           </div>
           <div id="task-date" class="my-3 col-md-6 my-md-2">
             <label for="task-date-begin" class="mb-1 ms-1">Data de Início</label>
-            <input id="task-date-begin" onchange="setMinDate()" class="form-control shadow-sm text-muted" type="date"></input>
+            <input id="task-date-begin" required onchange="setMinDate()" class="form-control shadow-sm text-muted" type="date">
             <label for="task-date-end" class="mb-1 mt-2 ms-1">Data de Término</label>
-            <input id="task-date-end" onchange="setMinHour()" class="form-control shadow-sm text-muted" type="date"></input>
+            <input id="task-date-end" required onchange="setMinHour()" class="form-control shadow-sm text-muted" type="date">
           </div>
           <div id="task-hour" class="my-3 col-md-6 my-md-2">
             <label for="task-hour-begin" class="mb-1 ms-1">Hora de Início</label>
-            <input id="task-hour-begin" onchange="setMinHour()" class="form-control shadow-sm text-muted" type="time"></input>
+            <input id="task-hour-begin" required onchange="setMinHour()" class="form-control shadow-sm text-muted" type="time">
             <label for="task-hour-end" class="mb-1 mt-2 ms-1">Hora de Término</label>
-            <input id="task-hour-end" oninvalid="textInvalid()" class="form-control shadow-sm text-muted" type="time"></input>
+            <input id="task-hour-end" required class="form-control shadow-sm text-muted" type="time">
           </div>
           <div class="my-3">
             <p class="mb-1 ms-1">Descrição da Tarefa</p>
-            <textarea id="task-description" style="height: 120px;" class="form-control"></textarea>
+            <textarea id="task-description" required style="height: 120px;" class="form-control"></textarea>
           </div>
           <div class="d-md-flex justify-content-md-around flex-md-wrap">
               <div id="change-button">
