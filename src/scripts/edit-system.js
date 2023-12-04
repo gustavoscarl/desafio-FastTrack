@@ -40,6 +40,9 @@ function setMinHour() {
         }
 }
 
+function noSubmitDefault(event) {
+    event.preventDefault();
+}
 
 function changeTask(event) {
   event.preventDefault();
