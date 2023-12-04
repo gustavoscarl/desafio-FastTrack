@@ -66,7 +66,7 @@ var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 
 function hideModal() {
     if (myModal) {
-        var backdrop = modal.querySelector('.modal-backdrop');
+        var backdrop = myModal.querySelector('.modal-backdrop');
 
         myModal.style.display = 'none';
         myModal.setAttribute('aria-hidden', true);
