@@ -64,8 +64,8 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
     function hideModal() {
-        var bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-        bootstrapModal.hide();
+        var modal = document.getElementById('exampleModal');
+        modal.style.display = 'none';
     }
 });
 
