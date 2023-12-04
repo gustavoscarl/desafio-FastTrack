@@ -16,23 +16,23 @@
       <div class="fs-2 text-center col-12 mt-5 mb-5">
         <h1>Gerenciador de Tarefas</h1>
       </div>
-      <form onsubmit="registerTask(event)">
+      <form onsubmit="registerTask(event)" class="was-validated">
         <div id="task-form" class="col-10 col-md-9 mx-auto row">
           <div id="task-name" class="mb-3 mb-md-2">
             <label for="task-name-input" class="mb-1 ms-1"> Nome da Tarefa</label>
-            <input class="form-control shadow-sm" id="task-name-input" name="text" required type="text" placeholder="Tarefa"></input>
+            <input class="form-control shadow-sm" id="task-name-input" name="text" required type="text" placeholder="Tarefa">
           </div>
           <div id="task-date" class="my-3 col-md-6 my-md-2">
             <label for="task-date-begin" class="mb-1 ms-1">Data de Início</label>
-            <input  onchange="setMinDate()" onchange="setMinHour()" id="task-date-begin" class="form-control shadow-sm text-muted" required name="date" type="date"></input>
+            <input  onchange="setMinDate()" onchange="setMinHour()" id="task-date-begin" class="form-control shadow-sm text-muted" required name="date" type="date">
             <label for="task-date-end" class="mb-1 mt-2 ms-1">Data de Término</label>
-            <input id="task-date-end" onchange="setMinHour()" pattern="/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;" class="form-control shadow-sm text-muted" required name="date" type="date"></input>
+            <input id="task-date-end" onchange="setMinHour()" pattern="/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;" class="form-control shadow-sm text-muted" required name="date" type="date">
           </div>
           <div id="task-hour" class="my-3 col-md-6 my-md-2">
             <label for="task-hour-begin" class="mb-1 ms-1">Hora de Início</label>
-            <input id="task-hour-begin" onchange="setMinHour()" class="form-control shadow-sm text-muted" required name="time" type="time"></input>
+            <input id="task-hour-begin" onchange="setMinHour()" class="form-control shadow-sm text-muted" required name="time" type="time">
             <label for="task-hour-end" class="mb-1 mt-2 ms-1">Hora de Término</label>
-            <input id="task-hour-end" class="form-control shadow-sm text-muted" required name="time" type="time"></input>
+            <input id="task-hour-end" class="form-control shadow-sm text-muted" required name="time" type="time">
           </div>
           <div class="my-3">
             <p class="mb-1 ms-1">Descrição da Tarefa</p>
