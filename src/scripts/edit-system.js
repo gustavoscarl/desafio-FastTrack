@@ -82,7 +82,7 @@ function hideModal() {
 
         // Trigger the 'hidden' event (if needed)
         var hiddenEvent = new Event('hidden');
-        modal.dispatchEvent(hiddenEvent);
+        myModal.dispatchEvent(hiddenEvent);
     }
 }
 
