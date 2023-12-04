@@ -75,7 +75,7 @@ function changeTask() {
     const users = JSON.parse(localStorage.getItem("users"));
     const taskId = JSON.parse(localStorage.getItem("editTaskIndex")).id;
 
-    const loggedInUserIndex = users.findIndex(user => user.username === loggedInUser.username);
+    const loggedInUserIndex = users.findIndex(user => user.email === loggedInUser.email);
 
     if (loggedInUserIndex !== -1) {
         const userObject = users[loggedInUserIndex];
@@ -113,7 +113,7 @@ function deleteTask() {
   const taskId = JSON.parse(localStorage.getItem("editTaskIndex")).id;
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const users = JSON.parse(localStorage.getItem("users"));
-  const loggedInUserIndex = users.findIndex(user => user.username === loggedInUser.username);
+  const loggedInUserIndex = users.findIndex(user => user.email === loggedInUser.email);
 
   if (loggedInUserIndex !== -1) {
       const userObject = users[loggedInUserIndex];
@@ -132,6 +132,8 @@ function deleteTask() {
 
           // Save the updated loggedInUser back to localStorage
           localStorage.setItem("loggedInUser", JSON.stringify(updatedLoggedInUser));
+
+          localStorage.removeItem("editTaskIndex")
 
           // Redirect to the task list or another page
           window.location.replace("/desafio-FastTrack/src/pages/system.html");
@@ -153,7 +155,7 @@ function accomplishTask() {
       const users = JSON.parse(localStorage.getItem("users"));
       const taskId = JSON.parse(localStorage.getItem("editTaskIndex")).id;
   
-      const loggedInUserIndex = users.findIndex(user => user.username === loggedInUser.username);
+      const loggedInUserIndex = users.findIndex(user => user.email === loggedInUser.email);
   
       if (loggedInUserIndex !== -1) {
           const userObject = users[loggedInUserIndex];
@@ -186,7 +188,7 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 const users = JSON.parse(localStorage.getItem("users"));
 const taskId = JSON.parse(localStorage.getItem("editTaskIndex")).id;
 
-const loggedInUserIndex = users.findIndex(user => user.username === loggedInUser.username);
+const loggedInUserIndex = users.findIndex(user => user.email === loggedInUser.email);
 
 if (loggedInUserIndex !== -1) {
     const userObject = users[loggedInUserIndex];
@@ -230,6 +232,8 @@ if (loggedInUserIndex !== -1) {
 // Cancel button function
 
 function cancelEditTask(){
+    localStorage.removeItem("editTaskIndex");
+    
     window.location.replace("/desafio-FastTrack/src/pages/system.html");
 }
 
