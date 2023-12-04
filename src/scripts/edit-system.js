@@ -60,33 +60,6 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
       }
 });
 
-// Hide modal on click
-
-function hideModal() {
-    var modal = document.getElementById('exampleModal');
-    if (modal) {
-        var backdrop = document.querySelector('.modal-backdrop');
-
-        modal.style.display = 'none';
-        modal.setAttribute('aria-hidden', true);
-        modal.removeAttribute('aria-modal');
-        modal.removeAttribute('role');
-
-        if (backdrop) {
-            backdrop.style.display = 'none'; // You may need to hide the backdrop manually
-        }
-
-        document.body.classList.remove('modal-open');
-        // You might need to reset other adjustments or handle other cleanup tasks here
-
-        // Trigger the 'hidden' event (if needed)
-        var hiddenEvent = new Event('hidden');
-        modal.dispatchEvent(hiddenEvent);
-    }
-}
-
-
-
 function changeTask() {
   var taskName = document.getElementById('task-name-input').value;
   var taskDateBegin = document.getElementById('task-date-begin').value;
