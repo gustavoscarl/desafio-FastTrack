@@ -92,7 +92,7 @@ function registerTask(event) {
             // Additional logic for updating the users array
             const users = JSON.parse(localStorage.getItem("users")) || [];
 
-            const loggedInUserIndex = users.findIndex(user => user.username === userObject.username);
+            const loggedInUserIndex = users.findIndex(user => user.email === userObject.email);
     
             if (loggedInUserIndex !== -1) {
                 users[loggedInUserIndex].tasks = userObject.tasks;
