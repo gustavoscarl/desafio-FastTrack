@@ -62,12 +62,11 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 
 // Hide modal on click
 
-document.addEventListener('DOMContentLoaded', function() {
-    function hideModal() {
+function hideModal() {
         var modal = document.getElementById('exampleModal');
         modal.style.display = 'none';
-    }
-});
+}
+
 
 function changeTask() {
   var taskName = document.getElementById('task-name-input').value;
