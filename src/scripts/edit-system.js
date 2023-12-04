@@ -40,13 +40,7 @@ function setMinHour() {
         }
 }
 
-function noSubmitDefault(event) {
-    event.preventDefault();
-}
-
-function changeTask(event) {
-  event.preventDefault();
-
+function changeTask() {
   var taskName = document.getElementById('task-name-input').value;
   var taskDateBegin = document.getElementById('task-date-begin').value;
   var taskDateEnd = document.getElementById('task-date-end').value;
