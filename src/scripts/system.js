@@ -90,12 +90,12 @@ function registerTask(event) {
             localStorage.setItem("loggedInUser", JSON.stringify(userObject));
     
             // Additional logic for updating the users array
-            const users = JSON.parse(localStorage.getItem("users")) || [];
+            const users = JSON.parse(localStorage.getItem("users"));
 
             const loggedInUserIndex = users.findIndex(user => user.email === userObject.email);
     
             if (loggedInUserIndex !== -1) {
-                users[loggedInUserIndex].tasks = userObject.tasks;
+                users[loggedInUserIndex].tasks = userObject.tasks  || [];
             }
     
             localStorage.setItem("users", JSON.stringify(users));
