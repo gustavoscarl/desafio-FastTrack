@@ -61,10 +61,13 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 });
 
 // Hide modal on click
-function hideModal() {
-    var bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-    bootstrapModal.hide();
-}
+
+document.addEventListener('DOMContentLoaded', function() {
+    function hideModal() {
+        var bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        bootstrapModal.hide();
+    }
+});
 
 function changeTask() {
   var taskName = document.getElementById('task-name-input').value;
