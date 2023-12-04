@@ -62,7 +62,7 @@
               Caso salvar as alterações, não será possível recuperar os dados anteriores à modificação.
             </div>
             <div class="modal-footer">
-              <input data-bs-dismiss="modal" type="submit" id="submit-button" class="btn btn-primary px-5 me-auto" value="Salvar">
+              <input data-bs-dismiss="modal" type="submit" id="submitButton" class="btn btn-primary px-5 me-auto" value="Salvar">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
@@ -79,7 +79,7 @@
               Tem certeza sobre excluir a tarefa? Não será possível recuperar os dados.
             </div>
             <div class="modal-footer">
-              <button onclick="deleteTask()" type="button" class="btn btn-primary px-3 me-auto">Sim</button>
+              <input type="submit" class="btn btn-primary px-3 me-auto" id="deleteButton" value="Sim">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
@@ -96,7 +96,7 @@
 
             </div>
             <div class="modal-footer">
-              <button onclick="accomplishTask()" type="button" class="btn btn-primary px-3 me-auto">Confirmar</button>
+              <input type="submit" value="Confirmar" id="accomplishButton" class="btn btn-primary px-3 me-auto">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>

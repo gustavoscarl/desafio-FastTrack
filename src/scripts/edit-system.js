@@ -39,12 +39,16 @@ function setMinHour() {
             taskHourEnd.removeAttribute('min');
         }
 }
+
+// Execute once the values are loaded
+setMinHour();
+
 // Prevent default and switch logic
 document.getElementById('my-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     switch (event.submitter.id) {
-        case 'submit-button':
+        case 'submitButton':
           changeTask();
           break;
         case 'deleteButton':
@@ -63,6 +67,9 @@ function changeTask() {
   var taskHourBegin = document.getElementById('task-hour-begin').value;
   var taskHourEnd = document.getElementById('task-hour-end').value;
   var taskDescription = document.getElementById('task-description').value;
+  
+  var bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+  bootstrapModal.hide();
 
   if (taskName && taskDateBegin && taskDateEnd 
     && taskHourBegin && taskHourEnd && taskDescription) {
