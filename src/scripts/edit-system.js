@@ -62,9 +62,11 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 
 // Hide modal on click
 
+
 function hideModal() {
-        var modal = document.getElementById('exampleModal');
-        modal.style.display = 'none';
+    const container = document.getElementById("exampleModal");
+    const modal = new bootstrap.Modal(container);
+    modal.hide();
 }
 
 
