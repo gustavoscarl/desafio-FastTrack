@@ -21,7 +21,7 @@
           </div>
           <div id="task-date" class="my-3 col-md-6 my-md-2">
             <label for="task-date-begin" class="mb-1 ms-1">Data de Início</label>
-            <input id="task-date-begin"  min="2023-01-01" max="2100-01-01" required onchange="setMinDate()" class="form-control shadow-sm text-muted" type="date">
+            <input id="task-date-begin"  min="2023-01-01" max="2100-01-01" required onchange="setMinDate()" onblur="setMinHour()" class="form-control shadow-sm text-muted" type="date">
             <label for="task-date-end" class="mb-1 mt-2 ms-1">Data de Término</label>
             <input id="task-date-end" max="2100-01-01" required onchange="setMinHour()" class="form-control shadow-sm text-muted" type="date">
           </div>
@@ -29,7 +29,7 @@
             <label for="task-hour-begin" class="mb-1 ms-1">Hora de Início</label>
             <input id="task-hour-begin" required onchange="setMinHour()" class="form-control shadow-sm text-muted" type="time">
             <label for="task-hour-end" class="mb-1 mt-2 ms-1">Hora de Término</label>
-            <input id="task-hour-end" required class="form-control shadow-sm text-muted" type="time">
+            <input id="task-hour-end" required onchange="setMinHour()" class="form-control shadow-sm text-muted" type="time">
           </div>
           <div class="my-3">
             <p class="mb-1 ms-1">Descrição da Tarefa</p>
