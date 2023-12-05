@@ -102,6 +102,15 @@ function registerTask(event) {
 
             generateTaskList();
             scrollToBottom();
+
+            var taskName = document.getElementById('task-name-input').value= '';
+            var taskDateBegin = document.getElementById('task-date-begin').value = '';
+            var taskDateEnd = document.getElementById('task-date-end').value = '';
+            var taskHourBegin = document.getElementById('task-hour-begin').value = '';
+            var taskHourEnd = document.getElementById('task-hour-end').value = '';
+            var taskDescription = document.getElementById('task-description').value = '';
+
+            document.getElementById('my-form').classList.remove('was-validated')
         } else {
             alert('Por favor, preencha todos os campos corretamente.')
         }
